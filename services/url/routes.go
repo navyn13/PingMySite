@@ -38,11 +38,6 @@ func (h *Handler) handleMetrics(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// collect metrics
-	// results := make([]string, 0, len(urls))
-	// for _, url := range urls {
-	// 	results = append(results, h.GetMetrics(url))
-	// }
 	results := h.GetBatchMetrics(urls)
 
 	// return as JSON
